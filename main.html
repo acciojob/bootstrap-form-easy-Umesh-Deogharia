@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
+  <body>
+    <!-- the entire body must be written by student -->
+    <div class="border container mt-5 p-3">
+      <h1 class="text-center mt-5">Internship Form</h1>
+      <form class="row g-3 mt-5 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="first-name-input" class="form-label">First Name</label>
+          <input
+            type="text"
+            id="first-name-input"
+            name="firstname"
+            class="form-control"
+            required
+          />
+        
+          <div class="invalid-feedback">First name required</div>
+        </div>
+        <div class="col-md-4">
+          <label for="last-name-input" class="form-label">Last Name</label>
+          <input
+            type="text"
+            id="last-name-input"
+            class="form-control"
+            required
+          />
+        
+          <div class="invalid-feedback">last name required</div>
+        </div>
+        <div class="col-md-4">
+          <label for="email-input" class="form-label">Email Address</label>
+          <input type="email" id="email-input" class="form-control" />
+         
+          <div class="invalid-feedback">email required</div>
+        </div>
 
-<body>
-	<!-- the entire body must be written by student -->
-	<div class="border ">
-		<h1 class="text-center">Internship Form</h1>
-	<form>
-		<div class="row d-flex justify-content-between">
-		<div class="col-1 w-25 d-flex flex-column">
-			<label for="first-name-input">First Name</label>
-			<input type="text" id="first-name-input">
-		</div>
-		<div class="col-1 w-25 d-flex flex-column">
-			<label for="last-name-input">Last Name</label>
-			
-			<input type="text" id="last-name-input">
-		</div>
-		<div class="col-2 w-25 d-flex flex-column">
-			<label for="email-input">Email Address</label>
-			<input type="email" id="email-input">
-		</div>
-		<div class="d-flex justify-content-between align-items-center col-12 ">
-			<div class="col-4 d-flex flex-column"> 
-				<label for="college-input">College</label>
-				<input type="text" id="college-input" class="w-4">
-			</div>
-			<div class="col-4 d-flex flex-column"> 
-				<label for="">Garduation Year</label>
-				<select>
-					<option selected disabled>Choose...</option>
-					<option>2020</option>
-					<option>2021</option>
-					<option>2022</option>
-					<option>2023</option>
-				</select>
-			</div>
-			<div class="col-2 d-flex flex-column"> 
-				<label for="roll-no-input">Roll No</label>
-				<input type="number" id="roll-no-input" class="w-4">
-			</div>
-		</div>
+        <div class="col-md-6">
+          <label for="college-input" class="form-label">College</label>
+          <input type="text" id="college-input" class="form-control" />
+         
+          <div class="invalid-feedback">Please provide a valid image</div>
+        </div>
+        <div class="col-md-3">
+          <label for="grad-year-select" class="form-label"
+            >Garduation Year</label
+          >
+          <select id="grad-year-select" class="form-select">
+            <option selected disabled>Choose...</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+          </select>
+          
+          <div class="invalid-feedback">Please select a valid Garduation Year</div>
+        </div>
+        <div class="col-md-3">
+          <label for="roll-no-input" class="form-label">Roll No</label>
+          <input type="number" id="roll-no-input" class="form-control" />
+          
+          <div class="invalid-feedback">Please provide a valid roll no</div>
+        </div>
 
-			<div>
-				<input type="checkbox" id="conditions-checkbox">
-				<label for="conditions-checkbox">Agree to terms and conditions</label>
-			</div>
-			<button class="w-25 bg-primary">Submit form</button>
+        <div class="form-check">
+          <input
+            type="checkbox"
+            id="conditions-checkbox"
+            class="form-check-input"
+            required
+          />
+          <label for="conditions-checkbox" class="form-label"
+            >Agree to terms and conditions</label
+          >
+          <div class="invalid-feedback">You must agree before submitting</div>
+        </div>
 
-		
-	</div>
+        <div class="col-md-12">
+          <button class="bg-primary">Submit form</button>
+        </div>
+      </form>
+    </div>
 
-	
-		</form>
-	</div>
-	
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>
